@@ -1,0 +1,360 @@
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  font-family: Arial, Helvetica, sans-serif;
+}
+
+body {
+  background: url("images/background.png") no-repeat center center fixed;
+  background-size: cover;
+  color: white;
+  min-height: 100vh;
+}
+
+/* ---------- NAV ---------- */
+nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 18px 50px;
+  background: rgba(10, 30, 40, 0.75);
+  position: sticky;
+  top: 0;
+}
+
+.logo {
+  display: flex;
+  align-items: center;
+  gap: 12px;
+  font-size: 24px;
+  font-weight: bold;
+}
+
+.logo img {
+  width: 40px;
+  height: 40px;
+  border-radius: 50%;
+  object-fit: cover;
+  background: white;
+  padding: 3px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+}
+
+nav ul li a {
+  text-decoration: none;
+  color: white;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.search {
+  display: flex;
+  align-items: center;
+  gap: 10px;
+}
+
+.search-box {
+  position: relative;
+  display: flex;
+  align-items: center;
+}
+
+.search-box i {
+  position: absolute;
+  left: 14px;
+  color: #555;
+  font-size: 14px;
+}
+
+.search-box input {
+  padding: 10px 14px 10px 36px;
+  width: 260px;
+  border: none;
+  border-radius: 20px;
+  font-size: 14px;
+  outline: none;
+}
+
+.search button {
+  padding: 10px 20px;
+  background: #1f8a70;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-weight: bold;
+  font-size: 14px;
+}
+
+.search button:hover {
+  background: #176e59;
+}
+
+/* ---------- SOCIAL SIDEBAR (fixed on every page) ---------- */
+.social {
+  position: fixed;
+  left: 30px;
+  top: 180px;
+  display: flex;
+  flex-direction: column;
+  gap: 25px;
+  font-size: 26px;
+  z-index: 10;
+}
+
+/* ---------- HERO ---------- */
+.hero {
+  padding: 70px 80px 70px 130px;
+}
+
+.content {
+  width: 50%;
+}
+
+.content h1 {
+  font-size: 62px;
+  line-height: 1.15;
+  margin-bottom: 25px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.desc-box {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 22px 26px;
+  border-radius: 8px;
+  margin-bottom: 28px;
+}
+
+.desc-box p {
+  line-height: 1.7;
+  font-size: 16px;
+}
+
+.hero button,
+.about button {
+  padding: 12px 26px;
+  background: #1f8a70;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+  font-size: 15px;
+  font-weight: bold;
+}
+
+.hero button:hover {
+  background: #176e59;
+}
+
+/* ---------- RESULTS ---------- */
+.results-wrap {
+  padding: 0 80px 60px;
+}
+
+.results-wrap h2 {
+  color: #ff9800;
+  font-size: 30px;
+  margin-bottom: 25px;
+}
+
+.results {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(320px, 1fr));
+  gap: 25px;
+}
+
+.place {
+  background: white;
+  color: black;
+  border-radius: 10px;
+  overflow: hidden;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.3);
+}
+
+.place img {
+  width: 100%;
+  height: 220px;
+  object-fit: cover;
+}
+
+.place h3 {
+  padding: 15px 15px 5px;
+  text-decoration: underline;
+  font-size: 19px;
+}
+
+.place p {
+  padding: 0 15px 20px;
+  font-size: 14px;
+  line-height: 1.5;
+}
+
+/* ---------- ABOUT ---------- */
+.about {
+  padding: 60px 80px 80px 130px;
+}
+
+.about h1 {
+  font-size: 56px;
+  margin-bottom: 30px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.intro-box {
+  background: rgba(0, 0, 0, 0.5);
+  padding: 28px 30px;
+  border-radius: 8px;
+  margin-bottom: 40px;
+  max-width: 900px;
+}
+
+.intro-box p {
+  line-height: 1.8;
+  font-size: 16px;
+  margin-bottom: 14px;
+}
+
+.team-box {
+  background: rgba(0, 0, 0, 0.4);
+  padding: 40px;
+  border-radius: 10px;
+}
+
+.team-box > h2 {
+  font-size: 40px;
+  margin-bottom: 25px;
+}
+
+.team {
+  display: flex;
+  gap: 30px;
+  flex-wrap: wrap;
+}
+
+.card {
+  background: rgba(255, 255, 255, 0.15);
+  padding: 28px 22px;
+  border-radius: 10px;
+  text-align: center;
+  flex: 1;
+  min-width: 220px;
+}
+
+.card .avatar {
+  width: 60px;
+  height: 60px;
+  border-radius: 50%;
+  background: rgba(255, 255, 255, 0.3);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-size: 28px;
+  margin: 0 auto 15px;
+}
+
+.card h3 {
+  margin-bottom: 8px;
+  font-size: 18px;
+}
+
+.card p {
+  font-size: 14px;
+  line-height: 1.5;
+  margin-bottom: 14px;
+  color: #eee;
+}
+
+.badge {
+  display: inline-block;
+  padding: 6px 18px;
+  background: #1e6fa8;
+  border-radius: 20px;
+  font-size: 13px;
+  font-weight: bold;
+}
+
+/* ---------- CONTACT ---------- */
+.contact {
+  padding: 70px 80px 70px 130px;
+  min-height: 70vh;
+  position: relative;
+}
+
+.contact-left h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+  text-shadow: 2px 2px 6px rgba(0, 0, 0, 0.6);
+}
+
+.contact-left p {
+  font-size: 18px;
+}
+
+.contact-box {
+  background: rgba(0, 0, 0, 0.55);
+  padding: 30px 35px;
+  border-radius: 10px;
+  width: 420px;
+  position: absolute;
+  right: 80px;
+  top: 60px;
+}
+
+.contact-box .field {
+  margin-bottom: 20px;
+}
+
+.contact-box label {
+  display: block;
+  margin-bottom: 6px;
+  font-weight: bold;
+  font-size: 15px;
+}
+
+.contact-box input,
+.contact-box textarea {
+  width: 100%;
+  padding: 12px;
+  border: none;
+  border-radius: 6px;
+  font-size: 14px;
+  outline: none;
+  font-family: inherit;
+}
+
+.contact-box textarea {
+  resize: vertical;
+}
+
+.contact-box button {
+  width: 100%;
+  padding: 12px;
+  background: #1f8a70;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  font-weight: bold;
+  font-size: 15px;
+  cursor: pointer;
+}
+
+.contact-box button:hover {
+  background: #176e59;
+}
+
+@media (max-width: 900px) {
+  .contact-box {
+    position: static;
+    width: 100%;
+    margin-top: 30px;
+  }
+  .content {
+    width: 100%;
+  }
+}
